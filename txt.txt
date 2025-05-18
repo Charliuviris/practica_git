@@ -1,0 +1,271 @@
+/* Archivo: responsive.css (o tu archivo de estilos responsive) */
+
+/*
+  ==========================================================================
+  AJUSTES PARA EL HEADER EN PANTALLAS PEQUEÑAS (ANCHO MÁXIMO 575px)
+  ==========================================================================
+*/
+
+@media (max-width: 575px) {
+  /*
+    - Ajusta la altura del contenedor principal del header (.header)
+    - a 'auto' para que se adapte al contenido o a un valor fijo menor.
+  */
+  header .header {
+    height: auto; /* O podrías usar: height: 70px; */
+  }
+
+  /*
+    - Ajusta el padding vertical y la altura del contenedor de la información
+    - del header (.header_information) para reducir el espacio vertical.
+    - También se ajustan los márgenes superior e inferior a 0.
+  */
+  .header_information {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  /*
+    - Reduce el tamaño del logo (la imagen dentro de .logo) para que
+    - ocupe un porcentaje menor del ancho y se ajuste proporcionalmente.
+  */
+  .logo img {
+    max-width: 70%;
+    height: auto;
+  }
+
+  /*
+    - Reduce el padding vertical de la barra de navegación (.navigation.navbar)
+    - para hacerla más compacta verticalmente. También se ajusta el padding general.
+  */
+  .navigation.navbar {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    float: none !important; /* Elimina el float para que ocupe el ancho completo */
+    display: block !important; /* Asegura que se muestre como bloque */
+    width: 100%; /* Ocupa todo el ancho */
+    margin-top: 0; /* Ajusta el margen superior si es necesario */
+  }
+
+  /*
+    - Reduce el tamaño de la fuente y el padding de los enlaces de navegación
+    - (.navigation.navbar-dark .navbar-nav .nav-link) para que ocupen menos espacio.
+  */
+  .navigation.navbar-dark .navbar-nav .nav-link {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  /*
+    ==========================================================================
+    MOSTRAR LOS BOTONES DE REGISTRATE E INGRESA EN EL NAV MÓVIL
+    ==========================================================================
+  */
+
+  /*
+    - Asegura que el contenedor de los botones (.sign_btn) se muestre
+    - como un bloque para que ocupe su propio espacio.
+  */
+  .sign_btn {
+    display: block !important; /* Fuerza la visualización como bloque */
+    margin-top: 10px; /* Añade un espacio desde los enlaces de navegación */
+    margin-bottom: 5px; /* Espacio entre los botones si hay varios */
+    width: 100%; /* Ocupan todo el ancho del menú */
+    text-align: center; /* Centra el texto de los botones */
+  }
+
+  /*
+    - Asegura que los enlaces dentro de los botones (.sign_btn a) también
+    - se muestren como bloques para ocupar el ancho completo de su contenedor.
+  */
+  .sign_btn a {
+    display: block;
+    padding: 8px 15px;
+    font-size: 15px;
+    border-radius: 20px; /* Mantiene el radio del borde */
+    margin-bottom: 5px; /* Espacio entre los botones si se apilan */
+  }
+
+  /*
+    - Ajusta el contenedor del menú colapsable (.collapse.navbar-collapse)
+    - para usar Flexbox y organizar los elementos verticalmente.
+  */
+  .collapse.navbar-collapse {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos horizontalmente */
+    background-color: #39b54a; /* Mantén o ajusta el color de fondo del menú */
+    padding: 20px; /* Ajusta el padding del menú */
+    margin-top: 10px; /* Espacio desde el botón del toggler */
+    position: relative; /* Cambia a relative para que los elementos fluyan */
+    width: 100%;
+    z-index: 999; /* Asegura que esté por encima de otros elementos */
+    text-align: center; /* Centra el texto de los enlaces del menú */
+  }
+
+  /*
+    - Asegura que la lista de navegación (.navbar-nav) ocupe todo el ancho
+    - disponible y añade un margen inferior para separarla de los botones.
+  */
+  .navbar-nav {
+    width: 100%;
+    margin-bottom: 15px;
+    text-align: center; /* Centra los enlaces de navegación */
+  }
+
+  /*
+    - Ajusta el padding de los items de la lista de navegación para espaciarlos
+    - verticalmente.
+  */
+  .navbar-nav .nav-item {
+    margin-bottom: 5px; /* Espacio entre los items del menú */
+  }
+
+  /*
+    - Asegura que el float del botón toggler se ajuste para la correcta
+    - visualización en pantallas pequeñas (generalmente a la derecha).
+  */
+  .navigation.navbar-dark .navbar-toggler {
+    float: right;
+    border: none; /* Elimina el borde por defecto si lo deseas */
+    padding: 8px 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  /**.navigation.navbar-dark .navbar-toggler-icon {
+    /* Mantén o ajusta los estilos del icono del menú 
+  }**/
+
+  
+}
+
+
+
+
+
+/* ... otros estilos responsive ... */                               NO SIRVE
+
+@media (max-width: 575px) {
+  header .header {
+    height: auto; /* Ajusta la altura automáticamente */
+  }
+
+  .header_information {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: auto;
+    margin-top: 0; /* Ajusta los márgenes si es necesario */
+    margin-bottom: 0;
+  }
+
+  .logo img {
+    max-width: 70%;
+    height: auto;
+  }
+
+  .navigation.navbar {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px; /* Ajusta el padding general si es necesario */
+    padding-right: 10px;
+  }
+
+  .navigation.navbar-dark .navbar-nav .nav-link {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  .sign_btn a {
+    padding: 5px 12px;
+    font-size: 14px;
+  }
+}
+
+/* ... más estilos responsive ... */                             NO SIRVE
+
+
+
+/* Archivo: responsive.css */
+
+@media (max-width: 575px) {
+  /* ... otros estilos para el header en móvil ... */
+
+  .logo {
+    text-align: center !important;
+    padding-bottom: 20px; /* Ajusta el padding inferior si es necesario */
+  }
+
+  .navigation.navbar {
+    float: right; /* Mantiene el float para el botón toggler */
+    display: block !important;
+    padding: 0;
+    width: 100%;
+    margin-top: 4px;
+  }
+
+  .collapse.navbar-collapse {
+    background-color: #004aad; /* O el color de fondo de tu menú */
+    padding: 20px;
+    margin-top: 10px; /* Espacio desde el botón toggler */
+    position: absolute; /* Posicionamiento para que se despliegue */
+    width: 100%;
+    z-index: 999;
+    text-align: center; /* Centra el contenido del menú */
+    display: none; /* Oculta por defecto */
+  }
+
+  /* Cuando la clase 'show' se añade por Bootstrap (al hacer clic en el toggler) */
+  .collapse.navbar-collapse.show {
+    display: block; /* Muestra el menú */
+    display: flex; /* Para organizar los elementos internos */
+    flex-direction: column; /* Apila los elementos (enlaces y botones) */
+    align-items: center; /* Centra los elementos horizontalmente */
+  }
+
+  .navbar-nav {
+    width: 100%;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .navbar-nav .nav-item {
+    margin-bottom: 5px;
+  }
+
+  .navigation.navbar-dark .navbar-nav .nav-link {
+    padding: 10px 0;
+    color: #fff;
+  }
+
+  .navigation.navbar-dark .navbar-toggler {
+    float: right;
+    margin-right: 2px;
+    border: inherit;
+  }
+
+  /*.navigation.navbar-dark .navbar-toggler-icon {
+    /* Estilos del icono del menú */
+  }*/   aqui va una llave
+
+  /* Estilos para los botones "Regístrate" e "Ingresa" */
+  .sign_btn {
+    display: block;
+    margin-bottom: 5px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .sign_btn a {
+    display: block;
+    padding: 8px 15px;
+    font-size: 15px;
+    border-radius: 20px;
+  }
+}
+
